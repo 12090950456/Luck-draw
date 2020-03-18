@@ -1,0 +1,243 @@
+header{
+	width: 100%;
+	height: 100px;
+	background: #1e1b29;
+	border-bottom: solid 4px red;
+}
+.member_wrap{
+	
+}
+.header_item{
+	overflow: hidden;
+}
+.user_menu{
+	width: 100%;
+	height: 170px;
+	padding: 20px 0;
+	background:url(../images/ban.jpg) repeat;
+}
+.header_item{
+	
+	width: 980px;
+	margin: 0 auto;
+}
+.menu_head{
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	border: solid 3px #fff;
+	overflow: hidden;
+}
+.menu_head img{
+	width: 100%;
+	height: 100%;
+}
+.menu_info{
+	width:840px;
+	margin-left: 20px;	
+}
+.info_name{
+	font-size: 18px;
+	line-height: 40px;
+	font-weight: bold;
+	color: #fff;
+}
+.info_name_box{
+	margin-top: 10px;
+}
+.level{
+	font-size: 14px;
+	color: #f60;
+	font-weight: bold;
+}
+.info_desc{
+	margin-top: 10px;
+	font-size: 14px;
+	color: #FFF;
+}
+.banner_menu{
+	width: 980px;
+	height: 50px;
+	margin: 20px auto;
+	background: #fff;
+}
+
+
+.nav_box{
+	margin-top: 50px;
+}
+.nav_box ul {
+	overflow: hidden;
+}
+.nav_box ul li{
+	display: block;
+	padding: 0 20px;
+}
+.nav_box ul li a{
+	color: #fff;
+	font-size: 16px;
+}
+.nav_box ul li a:hover{
+	color: red;
+}
+
+
+
+ .head_box {
+    position: relative;
+    background-color: #fff;
+    border-top: 4px solid #44b549;
+    border-bottom: 1px solid #d9dadc;
+}
+.logo a {
+      display: inline-block;
+    width: 385px;
+    height: 40px;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 2em;
+    text-align: right;
+}
+
+.login_wrap{
+	background: url(../images/ban.jpg) no-repeat center;
+	background-size: cover;
+}
+.banner .inner .login_frame {
+    width: 330px;
+    float: right;
+    margin-top: 25px;
+    padding: 36px 35px 40px;
+}
+.login_frame h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: center;
+}
+.login_input_panel {
+    margin-top: 5px;
+}
+.form_text_ipt {
+    position: relative;
+    padding: 3px 0 3px 54px;
+    border: 1px solid #e7e7eb;
+    margin-top: -1px;
+}
+.icon_login {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    margin-top: -11px;
+    width: 16px;
+    height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.icon_login.un {
+    background: url(../images/page_login_z32f720.png) 0 0 no-repeat;
+}
+.form_text_ipt input {
+    border: 0;
+    outline: 0;
+    padding: 11px 0;
+    vertical-align: middle;
+    width: 100%;
+}
+.icon_login.pwd {
+    background: url(../images/page_login_z32f720.png) 0 -22px no-repeat;
+}
+.login_frame {
+    width: 330px;
+   margin: 118px auto;
+padding: 36px 35px 40px;
+background-color: #fff;
+opacity: 0.9;
+}
+.login_help_panel {
+    overflow: hidden;
+    *zoom: 1;
+    margin-top: 10px;
+}
+.frm_checkbox_label {
+    display: inline-block;
+    text-align: left;
+    cursor: pointer;
+    margin-right: 1em;
+}
+.login_help_panel label {
+    float: left;
+}
+.btn_login {
+    display: inline-block;
+    overflow: visible;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    background-color: #44b549;
+    background-image: -moz-linear-gradient(top,#44b549 0,#44b549 100%);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#44b549),to(#44b549));
+    background-image: -webkit-linear-gradient(top,#44b549 0,#44b549 100%);
+    background-image: -o-linear-gradient(top,#44b549 0,#44b549 100%);
+    background-image: linear-gradient(to bottom,#44b549 0,#44b549 100%);
+    border-color: #44b549;
+    color: #fff;
+    height: 33px;
+    line-height: 33px;
+    *line-height: 31px;
+    width: 120px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.form_btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.login_title{
+	font-size: 18px;
+	text-align: center;
+	color: #888888;
+	padding: 15px 0;
+	width: 300px;
+	margin: 0 auto;
+	border-bottom: solid 1px #CCCCCC;
+}
+.form_text_ipt{
+	width: 280px;
+	height: 40px;
+	border: solid 1px #CCCCCC;
+	margin: 20px auto 0 auto;
+	background: #FFFFFF;
+}
+.form_check_ipt{
+	width: 300px;
+	margin:  10px auto;
+	overflow: hidden;
+}
+
+.check_left label{
+	cursor: pointer;
+}
+.check_left label input{
+	position: relative;
+	top: 2px;
+}
+.other_login{
+	overflow: hidden;
+	width: 300px;
+	height: 80px;
+	line-height: 80px;
+	margin: 0px auto;
+}
+.other_left{
+	font-size: 14px;
+	color: #999;
+}
+

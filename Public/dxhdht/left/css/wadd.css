@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+ .tree-node {
+        padding: 3px 0px;
+    }
+
+    .tabs li a.tabs-inner {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .panel-title {
+        font-size: 9pt;
+        height: 23px;
+        line-height: 23px;
+    }
+    .panel-with-icon {
+        padding-left: 22px;
+    }
+    .tree-node {
+        border-bottom: 1px solid #ccc;
+        height: 29px;
+    }
+
+    .tree-node .tree-title {
+        line-height: 29px;
+        font-size:9pt;
+    }
+
+    .tree-node .tree-icon {
+        margin-top: 7px;
+        padding-right: 5px;
+    }
+
+    .tree-node .tree-expanded {
+        background: url('__PUBLICHT__/left/EasyUI/images/accordion_arrows.png') no-repeat 0 0;
+    }
+
+    .tree-node .tree-collapsed {
+        background: url('__PUBLICHT__/left/EasyUI/images/accordion_arrows.png') no-repeat -16px 0;
+    }
+
+    .tree-node .tree-hit {
+        margin-top: 9px;
+        float: right;
+        margin-right: 6px;
+    }
+
+    .tree-node .tree-hit+span {
+        margin-left: 16px;
+    }
