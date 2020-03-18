@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta charset="gbk"/>
+   <title>安徽电信超清iTV体育频道</title>
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">  
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="__PUBLIC__/css/cssreset.css" />
+  <link rel="stylesheet" href="__PUBLIC__/css/index.css" />
+   <link rel="stylesheet" href="__PUBLIC__/css/idangerous.swiper.css">
+   <LINK rel=stylesheet type=text/css href="__PUBLIC__/css/lrtk.css">
+     <link rel="stylesheet" href="__PUBLIC__/css/jquery.flipster.css">
+   <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+	<script src="__PUBLIC__/js/jquery.flipster.js"></script>
+	<script src="__PUBLIC__/js/jweixin-1.2.0.js"></script>
+		<style>
+			#yqfrim{
+			    color: #FFF;
+			    position: absolute;
+			    z-index: 9999999;
+			    top: 27%;
+			    font-size: 0.75em;
+			    width: 100%;
+			}
+			#yqfrim h1 {
+			    text-align: center;
+			    margin-bottom: 2%;
+			    font-size: 1.2em;
+			}
+			#yqfrim .jian {
+			    width: 25%;
+			    position: absolute;
+			    top: -68%;
+			    right: 3%;
+			}
+			.rand{
+				color:red;
+			}
+			@media screen and (max-width:400px) {
+			   .swiper-container {
+			  width: 100%;
+			  color: #fff;
+			  text-align: center;
+			  height:165px;
+				}
+			}
+			@media screen and (min-width: 401px) and (max-width: 1199px) {
+				   .swiper-container {
+			  width: 100%;
+			  color: #fff;
+			  text-align: center;
+			  height:190px;
+				}
+			}
+			.swiper-slide .title {
+			  font-style: Microsoft YaHei;
+			  font-size: 42px;
+			  margin-bottom: 0;
+			  position: relative;
+			  top:5%;
+			}
+			.dui{
+	position:absolute;
+top: 25%;
+right: 0%;
+width: 10%;
+}
+.dui1{
+	position:absolute;
+top: 25%;
+right: 0%;
+width: 10%;
+}
+header .active .active1{
+	color: #068d2e;
+
+z-index: 999999;
+}
+header .active h3{
+	color: #006a1f;
+}
+footer{
+	width:55%;
+	margin:0 auto;
+
+}
+header .tou{
+	width:20%;
+	height:20%;
+	border-radius:50%;
+	margin: 0 auto;
+}
+body{
+	background:url("/weiobject/dxhd/public/dxhd/css/body.jpg") no-repeat;
+	background-size:100% 100%;
+	width:100%;
+}
+.slide{
+	margin-top:1%;
+}
+	  </style>
+ </head>
+ <body>
+ <!-- 领取奖励 -->
+<if condition="$uprize neq null">
+<!-- 下面开始是遮罩层 -->
+	<div class="opacity">
+		<div id="" class="login">
+			<h2>领取奖励</h2>
+			<h1>你选择了<span class="rand" id="cpspan">{$uprize.title}</span></h1>
+			<h1>请输入个人领取信息</h1>
+			<h1>号码与地址不填或无效视为放弃</h1>
+			<h3 style="margin-top: 7%;">姓名：<input type="text" id="auser"/></h3>
+			<h3 style="margin-top: 7%;">电话：<input type="tel" id="ipone"/></h3>
+			<h3 style="margin-top: 7%;">地址：<input type="text" id="address"/></h3>
+			<img onclick="sjp('{$uprize.prize_id}','{$uprize.n_count}')" src="__PUBLIC__/img/ling.png" class="ling">
+		</div> 
+	</div>
+<elseif condition="$u_record['is_true'] eq 1"/>
+	<!-- 	查看领取奖品 -->
+	<div class="opacity">
+		<div class="lookjp">
+			<h2>我的奖品</h2>
+			<img src="__PUBLIC__/img/goods/{$u_record["prize_id"]}1.png" style="width: 55%;margin: 0 auto;margin-left: auto;margin-left: 22.5%;">
+			<h1>您领取的是： </h1>
+			<h1 class="rand">{$u_record["title"]}</h1>
+			<a href="index">
+			<div class="ling" onclick="$('.lookjp').hide();"  style="background:#006b1f;width:50%;height:33px;    text-align: center;    border-radius: 25px;;margin:0 auto;font-size: 1.2em; font-weight: bold;line-height: 33px;"><span style="color:#fcff02">我知道了</span></div>
+			</a>
+		</div>
+	</div>
+	<else/>
+		<div class="opacity">
+			<div id="" style="height: 180px;" class="login">
+				<h2>温馨提醒</h2>
+				<h1>您没有选择奖品</h1>
+				<a href="index">	<div class="ling" onclick="goOrder()"  style="background:#006b1f;width:50%;height:33px;    text-align: center;    border-radius: 25px;;margin:0 auto;font-size: 1.2em; font-weight: bold;line-height: 33px;"><span style="color:#fcff02">确定</span></div></a>
+			</div> 
+		</div>	
+ </if>	
+	<header style="padding-top: 50%;">
+		<div class="tou">
+			<img src="{$headimg}"/>
+		</div>
+		<div id="" class="scroll" style="margin: 5% auto;">
+		<DIV id="container" class="banner" style="width:100%;">
+		  <OL>
+		      <volist name="urecord" id="val">
+			  	<li style="font-size:1em">中奖名单：{$val.ipone}</li>
+			  </volist>
+		 </OL>
+		
+		</DIV>
+		</div>
+		<div class="bar bar1">
+			<h3>已获得<span>{$ufEcord+$uEcord}</span>张<h3>
+		</div>
+		<div class="bar bar1">
+			<h3><span>{$tcount}</span>人正在参与  <span>{$u_recordC}</span>人<span></span>已兑换奖品 <h3>
+		</div>
+		<div class="active" style="margin: 2% auto;font-size: 1em;margin-bottom:0">
+			<h3><span class="active1">活动规则</span>/<span class="prize">奖品介绍</span></h3>
+		</div>
+	</header>	
+	<div id="" class="slide">
+		 <div class="swiper-container">
+    <div class="swiper-wrapper">
+	   <volist name="cardList" id="val" key="key">
+	      <div class="swiper-slide red-slide">
+	        <div class="title">
+	               <if condition="$val['num'] neq ''">
+		               <img src="__PUBLIC__/img/{$val.card_id}1.png" id="img{$key}" style="width:75%">
+						<div class="sign" style="background-image:url(/weiobject/dxhd/public/dxhd/img/yuan.png);right:0%;top:-9%;">x{$val.num}</div>
+	               <else/>
+		               <img  style="width:75%" src="__PUBLIC__/img/{$val.img_url}" id="img{$key}">
+						<div class="sign">0</div>
+	               </if>
+			<div id="" class="font">
+				<span style="font-size: 14px;color: black;">{$val.title}</span>
+			</div>	               
+			</div>
+	      </div>
+		</volist>      
+	</div>
+	<div style="display:none" class="pagination"></div>
+  </div>
+   <script src="__PUBLIC__/js/idangerous.swiper.min.js"></script>
+  <script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    paginationClickable: true,
+    slidesPerView: 3
+  })
+  </script>
+	</div>
+<!-- 下面开始是遮罩层 -->
+	<div id="" class="opacity" style="display:none">
+		
+	</div>
+	<div id="" class="rule rule1" style="display:none">
+	<img src="__PUBLIC__/img/x.png" class="login_close">
+		<h2>活动规则</h2>
+		<h3> 
+1、每位用户可以帮助多个用户翻牌，但为同一个用户只能翻牌一次；<br/>
+2、进入“翻牌”活动页面点击“分享翻牌”可以分享给好友，请好友帮忙翻牌；<br/>
+3、本活动采取公平、公正的方式，杜绝一切恶意盗刷行为，针对盗刷的用户将取消参与资格；<br/>
+4、本活动的最终解释权归安徽超清iTV公众号所有；<br/>
+5、一共有8种不同的明星卡牌，集满一定数量的卡牌后可以兑换对应的奖品，但每个用户只有一次兑换奖品的机会；<br/>
+6、在活动结束后，我们会有专人联系用户，进行奖品发放，并于15个工作日内将翼支付红包充值到用户预留的电信号码中；
+</h3>
+	</div>
+	<div id="" class="rule rule2" style="display:none">
+		<img src="__PUBLIC__/img/x.png" class="login_close">
+		<h2>奖项设置</h2>
+		<h3> 
+一等奖：45寸液晶电视一台，集满8张不同卡牌即可兑换；<br/>
+二等奖：中超门票一张（5月13日周日19:35，江苏苏宁VS大连一方），集满7张不同卡牌即可兑换；<br/>
+三等奖：运动周边奖品一个（真品球衣、运动背包或足球，随机发放），集满6张不同卡牌即可兑换；<br/>
+四等奖：7天iTV足球会员特权码一个，集满5张不同卡牌即可兑换；<br/>
+五等奖：翼支付红包一个（1元到10元不等），集满4张不同卡牌即可兑换；<br/>
+注：iTV足球会员特权码激活方法：待5月iTV足球频道上线后，用户可以登录安徽超清iTV，首页-我的（或个人中心）-订购管理-特权码，输入特权码进行兑换，即可开通iTV的7天足球会员，欧洲五大联赛、欧冠、中超、亚冠等所有场次比赛随心看
+</h3>
+	</div>
+	<!-- 购买提醒输入手机号码 -->
+	<div id="" class="orderDiv" style="display:none;height: 250px;">
+		<img src="__PUBLIC__/img/x.png" onclick="$('.orderDiv').hide();" class="login_close">
+		<h2>购买足球包</h2>
+		<h1>请输入手机号码</h1>
+		<h3 style="margin-top: 7%;">手机号码：<input type="tel" id="orderipone"/></h3>
+		<div class="ling" onclick="goOrder()"  style="background:#006b1f;width:50%;height:33px;    text-align: center;    border-radius: 25px;;margin:0 auto;font-size: 1.2em; font-weight: bold;line-height: 33px;"><span style="color:#fcff02">确定</span></div>
+	</div> 
+<!-- 	领奖过后 -->
+	<div id="" class="return" style="display:none">
+		<img src="__PUBLIC__/img/x.png" class="login_close" onclick="location.href='__URL__/index'">
+		<h2>领取奖励</h2>
+		<h1>领取成功！ </h1>
+		<h1>我们会在活动结束后联系发放奖品;</h1>
+		<h1>获得翼支付红包的用户，</h1>
+		<h1>我们将在活动结束后10个工作日内</h1>
+		<h1>将红包金额充值到您预留的电信号码中。</h1>
+		<h1>感谢您的参与！</h1>
+			<div class="return_img" onclick="goOrder()"  style="background:#006b1f;width:50%;height:33px;    text-align: center;    border-radius: 25px;;margin:25px auto;font-size: 1.2em; font-weight: bold;line-height: 33px;"><span style="color:#fcff02">返回</span></div>
+	</div>
+	
+ </body>
+  <script>
+  $(function(){
+	$('body').css({'width':($(window).width())+"px",'height':(window.innerHeight)+"px"});
+	$('.opacity').css('height',(window.innerHeight)+"px");
+  })
+  </script>
+  <script type=text/javascript>
+$(function() {
+    var index = 0;
+    var adtimer;
+    var _wrap = $("#container ol"); //
+    var len = $("#container ol li").length;
+    //len=1;
+    if (len > 1) {
+        $("#container").hover(function() {
+            clearInterval(adtimer);
+        },
+        function() {
+            adtimer = setInterval(function() {
+                var _field = _wrap.find('li:first'); //此变量不可放置于函数起始处,li:first取值是变化的
+                var _h = _field.height(); //取得每次滚动高度(多行滚动情况下,此变量不可置于开始处,否则会有间隔时长延时)
+                _field.animate({
+                    marginTop: -_h + 'px'
+                },
+                500,
+                function() { //通过取负margin值,隐藏第一行
+                    _field.css('marginTop', 0).appendTo(_wrap); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+                })
+
+            },
+            5000);
+        }).trigger("mouseleave");
+        function showImg(index) {
+            var Height = $("#container").height();
+            $("#container ol").stop().animate({
+                marginTop: -_h + 'px'
+            },
+            1000);
+        }
+    }
+});
+</script>
+<script>
+//配置微信信息  
+wx.config ({  
+    debug : false,    // true:调试时候弹窗  
+    appId : "{$signPackage["appId"]}",  // 微信appid  
+    timestamp : "{$signPackage["timestamp"]}", // 时间戳  
+    nonceStr : "{$signPackage["nonceStr"]}",  // 随机字符串  
+    signature : "{$signPackage["signature"]}", // 签名  
+    jsApiList : [  
+        // 所有要调用的 API 都要加到这个列表中  
+        'onMenuShareAppMessage',//  分享到朋友接口
+        'onMenuShareTimeline'	  //  分享到朋友圈
+    ]  
+});  
+wx.ready(function(){
+    /* 	config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，
+    	所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，
+    	不需要放在ready函数中。 */
+			wx.onMenuShareAppMessage({    
+			    title: '安徽电信超清iTV体育频道',     
+			    desc: '你的好友请求你的支援~',      
+			    link: 'http://www.51wxwx.com/weiObject/dxhd/index.php/Home/Index/go_F?fuserid={$userid}&tx={$headimg}',     
+			    imgUrl: 'http://www.51wxwx.com/weiObject/dxhd/Public/dxhd/img/iTV.png',      
+			    success: function () {     
+			    },    
+			    cancel: function () {     
+			    }    
+			}); 
+			wx.onMenuShareTimeline({
+			    title: '安徽电信超清iTV体育频道', 
+			    link: 'http://www.51wxwx.com/weiObject/dxhd/index.php/Home/Index/go_F?fuserid={$userid}&tx={$headimg}',
+			    imgUrl: 'http://www.51wxwx.com/weiObject/dxhd/Public/dxhd/img/iTV.png',
+			    success: function () {
+			},
+			cancel: function () {
+			    }
+			});    
+});
+wx.error(function(res){   
+   alert("好像出错了！！");  
+});  
+</script>
+<script>
+//开始领奖
+function sjp(zid,vsize){
+	var auser=$("#auser").val();
+	if(!auser){
+		alert("请输入姓名！");
+		return false;
+	}
+	var ipone=$("#ipone").val();
+	if(!ipone){
+		alert("请输入联系方式！");
+		return false;
+	}else{
+		var regtel = /^((133)|(153)|(18[0|1|9])|(177)|(199))[\d]{8}$/;
+		if(!regtel.exec(ipone)){
+			alert("请输入安徽电信的手机号码！");
+			return false;
+		}
+		$.post("__URL__/yzjiphone",{ipone:ipone},function(data){
+			if(data<1){
+				alert("请输入安徽电信的手机号码！");
+				return false;
+			}
+		});
+	}	
+	var address=$("#address").val();
+	if(!address){
+		alert("请输入地址！");
+		return false;
+	}	
+	if(vsize<={$fuc}){	
+		$.post("__URL__/yz_iphone",{ipone:ipone},function(data){
+			if(data==1){
+				alert("该号码已经领取过奖品了!");
+				return false;
+			}else{
+				$.post("__URL__/get_card",{prize_id:zid,user_name:auser,ipone:ipone,address:address,userid:"{$userid}"},function(data){
+					if(data=="-1"){
+						alert("每个用户只能领取一次奖品!");
+						location.href="__URL__/index";			
+					}else if(data=="-2"){
+						alert("该奖品已经被领取完了,请明天再来!");
+						location.href="__URL__/index";
+					}else if(data>0){
+						$('.return').show();
+						$('.login').css('display','none')	
+					}else{
+						alert("领奖失败!");
+						location.href="__URL__/index";			
+					}
+				})					
+			}
+		});
+	}else{
+		alert("集齐的数量不足，请再接再厉~");
+		return false;
+	}
+}
+$('.return_img').click(function(){
+	/* $('.return').css('display','none')
+	$('.opacity').css('display','none') */
+	location.href="__URL__/index";	
+})
+	$('.know').click(function(){
+		$('.my').css('display','none')
+		location.href="__URL__/index";	
+	})
+	$('.yaoqing').click(function(){
+		$('.opacity').css('display','block')
+		$('#yqfrim').css('display','block')
+	})
+</script>
+</html>

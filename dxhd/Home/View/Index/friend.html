@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta charset="utf-8"/>
+   <title>安徽电信超清iTV体育频道</title>
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">  
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="__PUBLIC__/css/cssreset.css" />
+  <link rel="stylesheet" href="__PUBLIC__/css/index.css" />
+  <link rel="stylesheet" href="__PUBLIC__/css/lrtk.css" />
+   <link rel="stylesheet" href="__PUBLIC__/css/idangerous.swiper.css">
+   <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+   <script>
+  $(function(){
+	$('body').css('height',($(window).height()+70)+"px");
+	$('body').css('width',($(window).width())+"px");
+	$('.opacity').css('height',($(window).height()+70)+"px");
+  })
+  </script>
+  <style type="text/css">
+	header .active .active1{
+	color: #068d2e;
+
+z-index: 999999;
+}
+header .active h3{
+	color: #006a1f;
+}
+footer{
+	width:55%;
+	margin:0 auto;
+}
+header .tou{
+	width:20%;
+	height:20%;
+	border-radius:50%;
+	margin: 0 auto;
+}
+body{
+	background:url("/weiobject/dxhd/public/dxhd/css/body.jpg") no-repeat;
+	background-size:100% 100%;
+	width:100%;
+}
+.rule2,.rule1{
+	    width: 80%;
+		    height: 300px;
+    overflow: hidden;
+	    font-size: 0.8em;
+    left: 10%;
+}
+.rule div{
+	    height: 300px;
+    overflow: scroll;
+}
+.opacity{
+padding-bottom: 5%;
+}
+  </style>
+ </head>
+
+ <body style="padding-bottom: 5%;">
+	<header style="padding-top: 50%;">
+		<div class="tou">
+			<img src="{$headimg}"/>
+		</div>
+		<div id="" class="scroll" style="margin:0">
+		<DIV id="container" class="banner" style="width:100%;margin: 5% auto;">
+		  <OL>
+		      <volist name="urecord" id="val">
+			  	<li>中奖名单：{$val.ipone}</li>
+			  </volist>
+		 </OL>
+		
+		</DIV>
+		</div>
+		<div class="bar bar1">
+			<h3>已获得<span>{$ufEcord+$uEcord}</span>张<h3>
+		</div>
+		<div class="bar bar1">
+			<h3><span>{$tcount}</span>人正在参与  <span>{$u_recordC}</span>人<span></span>已兑换奖品 <h3>
+		</div>
+		<div id="" class="active" style="margin: 2% auto;font-size: 1em;">
+			<h3><span class="active1">活动规则</span>/<span class="prize">奖品介绍</span></h3>
+		</div>
+	</header>	
+	<footer style="text-align: center;width:70%;">
+		<if condition="$ufData neq ''">
+			<img src="__PUBLIC__/img/{$ufData.card_id}1.png" style="margin: 3% auto;width:50%;">
+			<div id="" class="font" style="margin: 0px 0px 10px 0px;">
+				<span style="font-size: 14px;color:#000;font-size: larger;">{$ufData.title}</span>
+			</div>	
+		<!-- 提醒你已经帮好友翻过牌子了 -->
+		<div id="msgDiv" class="friend">
+			<h1 style="	text-align: center;font-size: 1.5em;padding: 6% 0%;">你已经帮你的好友翻过牌子了！</h1>
+			<a href="__URL__/index">
+				<div style="background:#006b1f;width:60%;height:33px;    text-align: center;    border-radius: 25px;margin:20px auto;font-size:1.1em; font-weight: bold;line-height: 33px;"><span style="color:#fcff02">我也要玩</span></div>
+			</a>
+			<div class="return_img" onclick="$('#msgDiv').hide();" style="background:#006b1f;width:60%;height:33px;    text-align: center;    border-radius: 25px;margin:20px auto;font-size: 1.1em; font-weight: bold;line-height: 33px;"><span style="color:#fcff02">确定</span></div>			
+		</div>
+		<else/>
+				<div onclick="ufsave(this)" style="background:#006b1f;width:80%;height:28px;    text-align: center;    border-radius: 25px;margin:28px auto;font-size: 0.9em;font-weight: bold;line-height: 27px;"><span style="color:#fcff02">立即翻牌</span></div>
+		</if>
+		<a href="__URL__/index">
+			<div style="background:#006b1f;width:80%;height:28px;    text-align: center;    border-radius: 25px;margin:20px auto;font-size: 0.9em; font-weight: bold;line-height: 27px;"><span style="color:#fcff02">我也要玩</span></div>
+		</a>
+		
+	</footer>
+
+<!-- 下面开始是遮罩层 -->
+	<div id="" class="opacity" style="display:none">
+		
+	</div>
+	<div id="" class="rule rule1" style="display:none">
+	<img src="__PUBLIC__/img/x.png" width="" height="" border="0" alt="" class="login_close">
+		<div id="" class="">
+		<h2>活动规则</h2>
+		<h3> 1、每位用户可以帮助多个用户翻牌，但为同一个用户只能翻牌一次；<br/>
+2、进入“翻牌”活动页面点击“分享翻牌”可以分享给好友，请好友帮忙翻牌；<br/>
+3、本活动采取公平、公正的方式，杜绝一切恶意盗刷行为，针对盗刷的用户将取消参与资格；<br/>
+4、本活动的最终解释权归安徽超清iTV公众号所有；<br/>
+5、一共有8种不同的明星卡牌，集满一定数量的卡牌后可以兑换对应的奖品，但每个用户只有一次兑换奖品的机会；<br/>
+6、在活动结束后，我们会有专人联系用户，进行奖品发放，并于15个工作日内将翼支付红包充值到用户预留的电信号码中；</h3>
+</div>
+	</div>
+	<div id="" class="rule rule2" style="display:none">
+		<img src="__PUBLIC__/img/x.png" width="" height="" border="0" alt="" class="login_close">
+		<div id="" class="">
+			
+			<h2>奖项设置</h2>
+		<h3> 
+一等奖：45寸液晶电视一台，集满8张不同卡牌即可兑换；<br/>
+二等奖：中超门票一张（5月13日周日19:35，江苏苏宁VS大连一方），集满7张不同卡牌即可兑换；<br/>
+三等奖：运动周边奖品一个（真品球衣、运动背包或足球，随机发放），集满6张不同卡牌即可兑换；<br/>
+四等奖：7天iTV足球会员特权码一个，集满5张不同卡牌即可兑换；<br/>
+五等奖：翼支付红包一个（1元到10元不等），集满4张不同卡牌即可兑换；<br/>
+注：iTV足球会员特权码激活方法：待5月iTV足球频道上线后，用户可以登录安徽超清iTV，首页-我的（或个人中心）-订购管理-特权码，输入特权码进行兑换，即可开通iTV的7天足球会员，欧洲五大联赛、欧冠、中超、亚冠等所有场次比赛随心看
+</h3>
+	</div>
+	</div>
+
+
+	<!-- 好友帮忙翻牌 -->
+	<div id="sudiv" class="friend" style="display:none">
+		<img src="__PUBLIC__/img/x.png" onclick="location.reload();" class="login_close">
+		<h2>翻牌成功</h2>
+		<h1>恭喜您！ </h1>
+		<h1>帮你的好友翻牌成功！</h1>
+		<a href="index">	
+		<div class="return_img" onclick="location.reload();" style="background:#006b1f;width:60%;height:28px;    text-align: center;    border-radius: 25px;;margin:28px auto;font-size: 0.9em; font-weight: bold;line-height: 27px;"><span style="color:#fcff02">我也要玩</span></div>
+		</a>
+		<div class="return_img" onclick="location.reload();" style="background:#006b1f;width:60%;height:28px;    text-align: center;    border-radius: 25px;;margin:0 auto;font-size: 0.9em; font-weight: bold;line-height: 27px;"><span style="color:#fcff02">确定</span></div>
+	</div>
+ </body>
+ <script type=text/javascript>
+$(function() {
+    var index = 0;
+    var adtimer;
+    var _wrap = $("#container ol"); //
+    var len = $("#container ol li").length;
+    //len=1;
+    if (len > 1) {
+        $("#container").hover(function() {
+            clearInterval(adtimer);
+        },
+        function() {
+            adtimer = setInterval(function() {
+                var _field = _wrap.find('li:first'); //此变量不可放置于函数起始处,li:first取值是变化的
+                var _h = _field.height(); //取得每次滚动高度(多行滚动情况下,此变量不可置于开始处,否则会有间隔时长延时)
+                _field.animate({
+                    marginTop: -_h + 'px'
+                },
+                500,
+                function() { //通过取负margin值,隐藏第一行
+                    _field.css('marginTop', 0).appendTo(_wrap); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+                })
+
+            },
+            5000);
+        }).trigger("mouseleave");
+        function showImg(index) {
+            var Height = $("#container").height();
+            $("#container ol").stop().animate({
+                marginTop: -_h + 'px'
+            },
+            1000);
+        }
+    }
+});
+</script>
+<script>
+function ufsave(xx){
+	$.post("__URL__/fxstart",{userid:"{$userid}"},function(data){
+		if(data=="-1"){
+			alert("打开方式不对!");
+			location.href="__URL__/index";
+		}else if(data=="-2"){
+			alert("亲不可以自己给自己刷票!");
+			location.href="__URL__/index";			
+		}else if(data=="-3"){
+			alert("您已经帮你的好友翻过牌子了!");
+		}else{
+			var dataobj=eval("("+data+")");
+			$("#saveimg").attr("src","/weiObject/dxhd/Public/dxhd/img/"+dataobj.cimg);
+			$(xx).hide();
+			$("#sudiv").show();
+		}
+	});
+}
+</script>
+</html>

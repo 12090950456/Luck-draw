@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <meta charset="utf-8"/>
+   <title>安徽电信超清iTV体育频道</title>
+  <meta name="viewport" content="width=device-width,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">  
+  <meta name="generator" content="editplus" />
+  <link rel="stylesheet" href="__PUBLIC__/css/cssreset.css" />
+  <link rel="stylesheet" href="__PUBLIC__/css/index.css" />
+  <link rel="stylesheet" href="__PUBLIC__/css/lrtk.css" />
+  <script type="text/javascript" src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>
+  <style type="text/css">
+	body{
+	background:url("/weiobject/dxhd/public/dxhd/css/body.jpg") no-repeat;
+	background-size:100% 100%;
+	width:100%;
+}
+  </style>
+ </head>
+<if condition="$fuserid eq $userid">
+		<!-- 不允许自己给自己翻牌子 -->
+		<div class="opacity">
+			<div id="msgDiv" class="friend" style="height: 150px;">
+				<h1 style="	text-align: center;font-size: 1.5em;padding: 6% 0%;">亲不可以给自己帮自己翻牌子哦！</h1>
+				<a href="__URL__/index">
+					<div class="return_img"  style="background:#006b1f;width:50%;height:28px;    text-align: center;    border-radius: 25px;;margin:20px auto;font-size: 1.1em; font-weight: bold;line-height: 27px;"><span style="color:#fcff02">确定</span></div>
+				</a>
+			</div>
+		</div>
+</if>
+ <body style="margin: 0;">
+	<header style="padding-top:51%">
+		<div class="tou" style="width: 25%;">
+			<img src="{$tx}"/>
+		</div>
+	</header>	
+		<img src="__PUBLIC__/img/help.png" style="width: 70%;margin-left: 17%">	
+		<a href="__URL__/fp"><img src="__PUBLIC__/img/rightnow.png" style="width:60%;margin-left:20%;height:auto" height="" border="0" alt="" /></a>
+ </body>
+ <script>
+ $(function(){
+		$('body').css({'width':($(window).width())+"px",'height':(window.innerHeight)+"px"});
+		$('.opacity').css('height',(window.innerHeight)+"px");
+	  })
+ </script>
+</html>
+
